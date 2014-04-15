@@ -1,0 +1,17 @@
+{
+  "name": "level-lazy-db",
+  "version": "0.0.0",
+  "description": "Open leveldb only when you need to",
+  "repository": "mafintosh/level-lazy-db",
+  "dependencies": {
+    "thunky": "^0.1.0",
+    "readable-stream": "^1.0.26-4"
+  },
+  "devDependencies": {
+    "tape": "^2.12.3",
+    "memdb": "^0.1.0"
+  },
+  "scripts": {
+    "test": "tape test.js"
+  }
+}
