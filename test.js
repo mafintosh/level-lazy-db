@@ -44,6 +44,16 @@ tape('del', function(t) {
 	});
 });
 
+tape('close', function(t) {
+	var db = lazy(t);
+	db.put('hello', 'world', function() {
+		db.close(function(err) {
+			t.ok(!err);
+			t.end();
+		});
+	});
+});
+
 tape('read-stream', function(t) {
 	var db = lazy(t);
 	db.put('hello', 'world', function() {

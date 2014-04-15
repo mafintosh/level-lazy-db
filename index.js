@@ -33,6 +33,13 @@ Lazy.prototype.del = function() {
 	});
 };
 
+Lazy.prototype.close = function() {
+	var args = arguments;
+	this.open(function(db) {
+		db.close.apply(db, args);
+	});
+};
+
 Lazy.prototype.readStream =
 Lazy.prototype.createReadStream = function() {
 	var args = arguments;
