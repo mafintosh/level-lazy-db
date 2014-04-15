@@ -1,6 +1,6 @@
 {
   "name": "level-lazy-db",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Open leveldb only when you need to",
   "repository": "mafintosh/level-lazy-db",
   "dependencies": {
