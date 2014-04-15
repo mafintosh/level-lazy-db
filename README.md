@@ -4,7 +4,7 @@ Open leveldb only when you need to
 
 	npm install level-lazy-db
 
-[![build status](https://secure.travis-ci.org/mafintosh/level-lazy-db.png)](http://travis-ci.org/mafintosh/level-lazy-db)]
+[![build status](https://secure.travis-ci.org/mafintosh/level-lazy-db.png)](http://travis-ci.org/mafintosh/level-lazy-db)
 
 ## Usage
 
