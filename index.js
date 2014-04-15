@@ -1,6 +1,5 @@
 var thunky = require('thunky');
 var xtend = require('xtend');
-var util = require('util');
 var PassThrough = require('readable-stream/passthrough');
 
 var Lazy = function(open) {
