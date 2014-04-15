@@ -31,6 +31,16 @@ tape('put', function(t) {
 	});
 });
 
+tape('on-open', function(t) {
+	var db = lazy(t);
+	db.on('open', function() {
+		t.end();
+	})
+	db.put('hello', 'world', function(err) {
+	});
+});
+
+
 tape('del', function(t) {
 	var db = lazy(t);
 	db.put('hello', 'world', function() {

@@ -1,16 +1,26 @@
 var thunky = require('thunky');
 var xtend = require('xtend');
+var util = require('util');
 var PassThrough = require('readable-stream/passthrough');
+var events = require('events');
+var fwd = require('fwd');
 
 var Lazy = function(open) {
 	if (!(this instanceof Lazy)) return new Lazy(open);
+
+	var self = this;
 	this.open = thunky(function(cb) {
 		open(function(err, db) {
 			if (err) return self.emit('error', err);
+			fwd(db, self);
 			cb(db);
 		});
 	});
+
+	events.EventEmitter.call(this);
 };
+
+util.inherits(Lazy, events.EventEmitter);
 
 Lazy.prototype.get = function() {
 	var args = arguments;
