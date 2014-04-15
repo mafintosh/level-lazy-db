@@ -6,7 +6,8 @@
   "dependencies": {
     "thunky": "^0.1.0",
     "readable-stream": "^1.0.26-4",
-    "xtend": "^3.0.0"
+    "xtend": "^3.0.0",
+    "fwd": "^0.2.2"
   },
   "devDependencies": {
     "tape": "^2.12.3",
